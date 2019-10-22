@@ -14,4 +14,9 @@ A Java command-line application implementing Conway's Game of Life.
 
 ## Screenshots:
 ![Glider](https://raw.githubusercontent.com/edwardayala/GameOfLife/master/GameOfLife.png)
+
+
 ![Pattern1](https://raw.githubusercontent.com/edwardayala/GameOfLife/master/pattern1.gif)
+
+## UML Diagram
+![UML](https://raw.githubusercontent.com/edwardayala/GameOfLife/master/UMLClassDiagramGOL.png)
