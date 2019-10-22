@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class client {
 
-    static final int NUM_CELLS = 50;
+    private static final int NUM_CELLS = 50;
     static final char LIVE_IMAGE = 'O';
     static final char DEAD_IMAGE = '-';
     static final int NUM_RUNS = 15;
@@ -26,7 +26,7 @@ public class client {
         gd.run();
     }
 
-    public static int [][] getInitialStates(String fileName) throws FileNotFoundException {
+    private static int [][] getInitialStates(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         Scanner input = new Scanner(file);     // Create scanner to read file
         int[][] states;

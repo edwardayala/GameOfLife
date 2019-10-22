@@ -1,7 +1,7 @@
 // Game of Life | Edward Ayala
 public class Grid {
-    static final int NUM_RUNS = 15;
-    static final int NUM_DISPLAY = 1;
+    private static final int NUM_RUNS = 15;
+    private static final int NUM_DISPLAY = 1;
 
 
     // Properties
@@ -10,7 +10,7 @@ public class Grid {
     private Square [][] _squares;
 
     // Constructor
-    public Grid(int [][] states){
+    Grid(int[][] states){
         // Create a 2D array of pointers to squares
         rows = states.length;
         cols = states[0].length;
@@ -29,7 +29,7 @@ public class Grid {
     public Grid(){}
 
     // Methods
-    public void run(){
+    void run(){
         // Run the simulation generation by generation
         for (int n = 0; n < NUM_RUNS; n++) {
             // Update states of cells on the grid
@@ -56,7 +56,7 @@ public class Grid {
         }
 
     }
-    public void display(){
+    void display(){
         // Print the images of cells on the grid
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -65,7 +65,7 @@ public class Grid {
             System.out.println();
         }
     }
-    public void getStats(){
+    void getStats(){
         int numLiveCells = 0;
         int numDeadCells = 0;
 
@@ -82,13 +82,13 @@ public class Grid {
                        + "\nThe number of dead cells = " + numDeadCells
                        + "\nTotal cells = " + (numLiveCells+numDeadCells));
     }
-    public int getRows(){
+    int getRows(){
         return rows;
     }
-    public int getCols(){
+    int getCols(){
         return cols;
     }
-    public Square getSquare(int x, int y){
+    Square getSquare(int x, int y){
         return _squares[x][y];
     }
 }

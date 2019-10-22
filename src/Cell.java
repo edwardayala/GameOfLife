@@ -8,7 +8,7 @@ public class Cell extends Square{
     private int _liveNeighbors = 0;// Used to keep track of the number of live neighbors
 
     // Constructor
-    public Cell( Grid aGrid, Coordinate aCoord, char aImage, int f){
+    Cell(Grid aGrid, Coordinate aCoord, char aImage, int f){
         super(aGrid,aCoord);
         _image = aImage;
         _toBeLive = false;
@@ -29,8 +29,8 @@ public class Cell extends Square{
     public void setLiveInfo(boolean lf){
         _toBeLive = lf;
     }
-    public void reset(){ _liveNeighbors = 0; }
-    public int countLiveNeighbors(){
+    private void reset(){ _liveNeighbors = 0; }
+    private int countLiveNeighbors(){
         // Count how many live cells among the eight neighbors using the rules
 
         // Changed num -> _liveNeighbors : making live neighbors a class property
@@ -57,10 +57,10 @@ public class Cell extends Square{
         }
         return _liveNeighbors;
     }
-    public void resetLifeSpan(){
+    private void resetLifeSpan(){
         _lifeSpan = 0;
     }
-    public void incrementLiveSpan(){
+    private void incrementLiveSpan(){
         _lifeSpan++;
     }
     public void update(){

@@ -7,16 +7,16 @@ abstract class Square {
     private Coordinate _coord;
 
     // Constructor
-    public Square( Grid aGrid, Coordinate aCoord){
+    Square(Grid aGrid, Coordinate aCoord){
         _grid = aGrid;
         _coord = aCoord;
     }
 
     // Methods
-    public Coordinate getCoordinate(){
+    Coordinate getCoordinate(){
         return _coord;
     }
-    public Grid getGrid(){
+    Grid getGrid(){
         return _grid;
     }
 
